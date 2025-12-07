@@ -1,3 +1,7 @@
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
 [build]
   base = "frontend-vite"
   command = "npm run build"
