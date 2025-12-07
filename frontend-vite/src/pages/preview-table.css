@@ -1,0 +1,139 @@
+/* Excel-like preview table styling */
+.preview-container {
+  position: relative;
+  width: 100%;  
+  max-width: 950px;           /* cap width at 500px */
+  max-height: 300px;             /* vertical scroll limit */
+  overflow-x: auto;              /* horizontal scroll only inside table */
+  overflow-y: auto;              /* vertical scroll only inside table */
+  border: 1px solid var(--muted, #ccc);
+  border-radius: 4px;
+  margin: 0 auto;                /* center in page */
+}
+
+/* Table */
+.preview-table {
+  background-color: #3218536f;
+  border-collapse: collapse;
+  max-width: 100%;
+  table-layout: fixed;           /* equal column widths */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9em;
+  background-color: var(--card, #fff);
+  color: var(--text, #000);
+}
+
+/* Header + cells */
+.preview-table th,
+.preview-table td {
+  border: 1px solid var(--muted, #ccc);
+  padding: 0 10px;
+  text-align: left;
+  width: 120px;                  /* fixed width for all cells */
+  min-width: 120px;              /* enforce equal width */
+  max-width: 120px;
+  white-space: nowrap;           /* prevent wrapping */
+  overflow: hidden;              /* hide overflow text */
+  text-overflow: ellipsis;       /* show ... if too long */
+}
+.preview-table input{
+  border: none;
+  font-size: 16px;
+}
+/* Sticky header */
+.preview-table th {
+  position: sticky;
+  top: 0;
+  background-color: var(--row-light, #2a2a2a);
+  color: var(--text-light, #f0f0f0);
+  font-weight: bold;
+  z-index: 2;
+}
+
+/* Alternating row colors */
+.preview-table tr:nth-child(even) td {
+  background-color: var(--row-light);
+}
+.preview-table tr:nth-child(odd) td {
+  background-color: var(--row-light, #2a2a2a);
+  color: var(--text-light, #f0f0f0);
+}
+
+/* Hover effect */
+.preview-table tr:hover td {
+  background-color: var(--hover, #e6f7ff);
+  color: var(--text-light, #000);
+}
+
+/* Row number column */
+.preview-table .row-number {
+  background-color: var(--card-alt, #f5f5f5);
+  font-weight: bold;
+  text-align: right;
+  width: 60px;                   /* fixed width for row numbers */
+  min-width: 60px;
+  max-width: 60px;
+  position: sticky;
+  left: 0;
+  z-index: 3;
+}
+@media (max-width: 1050px) {
+  .preview-table, .preview-container {
+    width: 720px;
+  }
+}
+@media (max-width: 950px) {
+  .preview-table, .preview-container {
+    width: 770px;
+  }
+}
+@media (max-width: 855px) {
+  .preview-table, .preview-container {
+    width: 730px;
+  }
+}
+@media (max-width: 800px) {
+  .preview-table, .preview-container {
+    width: 700px;
+  }
+}
+@media (max-width: 700px) {
+  .preview-table, .preview-container {
+    width: 600px;
+  }
+}
+@media (max-width: 600px) {
+  .preview-table, .preview-container {
+    width: 540px;
+  }
+}
+@media (max-width: 550px) {
+  .preview-table, .preview-container {
+    width: 490px;
+  }
+}
+@media (max-width: 500px) {
+  .preview-table, .preview-container {
+    width: 440px;
+  }
+}
+@media (max-width: 450px) {
+  .preview-table, .preview-container {
+    width: 350px;
+  }
+}
+@media (max-width: 400px) {
+  .preview-table, .preview-container {
+    width: 330px;
+  }
+}
+@media (max-width: 350px) {
+  .preview-table, .preview-container {
+    width: 300px;
+  }
+}
+@media (max-width: 300px) {
+  .preview-table, .preview-container {
+    width: 280px;
+  }
+}

@@ -1,0 +1,38 @@
+/* components/LoadingOverlay.css */
+
+/* Spin animation */
+@keyframes spin {
+  0%   { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Glow pulse animation */
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 8px rgba(59, 130, 246, 0.6); }
+  50%      { box-shadow: 0 0 20px rgba(59, 130, 246, 1); }
+}
+
+/* Text pulse animation */
+@keyframes pulse {
+  0%, 100% { opacity: 0.8; }
+  50%      { opacity: 1; }
+}
+
+.overlay { 
+  backdrop-filter: blur(6px);
+}
+
+.spinner-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 60px;
+  height: 60px;
+  border: 6px solid rgba(255, 255, 255, 0.2);
+  border-top-color: #3b82f6; /* brand blue */
+  border-radius: 50%;
+  animation: spin 1s linear infinite, glow 1.5s ease-in-out infinite;
+}
