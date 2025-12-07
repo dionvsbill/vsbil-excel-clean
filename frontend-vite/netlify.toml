@@ -1,0 +1,7 @@
+[build]
+  base = "frontend-vite"
+  command = "npm run build"
+  publish = "frontend-vite/dist"
+
+[build.environment]
+  NODE_VERSION = "22"
