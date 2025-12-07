@@ -21,7 +21,8 @@
     "nanoid": "^5.1.6",
     "paystack": "^2.0.1",
     "pdf-parse": "^2.4.5",
-    "pdfkit": "^0.17.2"
+    "pdfkit": "^0.17.2",
+    "socket.io": "^4.8.1"
   },
   "keywords": [],
   "author": "",
